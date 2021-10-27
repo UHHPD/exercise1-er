@@ -8,6 +8,7 @@ std::ifstream fin("datensumme.txt");
 std::ifstream fin2("datensumme.txt");
 std::ofstream fout("mittelwerte.txt");
 std::ofstream fout2("varianzen.txt");
+
 int a;
 double n=9;
 int sum=0;
@@ -32,7 +33,7 @@ double sum2=0;
 
     for(int k=0; k<9;++k){
         fin2 >> a;
-        sum2 += pow((a-mean),2);
+        sum2 += (a-mean)*(a-mean);
     }
 
     double var = 1/n * sum2;
@@ -64,17 +65,17 @@ for(int i=0; i<N; ++i){
 
 }
 mean3=1/N * sum3;
-std::cout<<"Mittelwert:"<<mean3<<std::endl;
-//std::cout<<"Korrigierter Mittelwert:"<<N/(N-1)*mean3<<std::endl;
+std::cout<<"Mittelwert der Mittelwerte:"<<mean3<<std::endl;
+//*std::cout<<"Korrigierter Mittelwert:"<<N/(N-1)*mean3<<std::endl;
 
 for(int j=0; j<N;j++){
     fin4>>b;
-    sum4 += pow((mean3-b),2);
+    sum4 += b;
   //*  std::cout<<sum4<<std::endl;
 }
 var4 = 1/N * sum4;
-std::cout<<"Varianz:"<<var4<<std::endl;
-// std::cout<<"Korrigierte Varianz:"<<N/(N-1)*var4<<std::endl;
+std::cout<<"Mittelwert der Varianzen:"<<var4<<std::endl;
+//*std::cout<<"Korrigierte Varianz:"<<N/(N-1)*var4<<std::endl;
 
 fin3.close();
 fin4.close();
