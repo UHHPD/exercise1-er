@@ -22,7 +22,7 @@ int main()
   {
     fin2 >> count;
     sum += (count-avg)*(count-avg);
-    std::cout << count << " " << sum << std::endl;
+    //std::cout << count << " " << sum << std::endl;
   }
   var = sum / 234;
   std::cout << "Man erhält eine Varianz von: " << var << "..." <<std::endl;
