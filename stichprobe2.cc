@@ -65,7 +65,7 @@ for(int i=0; i<N; ++i){
 }
 mean3=1/N * sum3;
 std::cout<<"Mittelwert:"<<mean3<<std::endl;
-std::cout<<"Korrigierter Mittelwert:"<<N/(N-1)*mean3<<std::endl;
+//std::cout<<"Korrigierter Mittelwert:"<<N/(N-1)*mean3<<std::endl;
 
 for(int j=0; j<N;j++){
     fin4>>b;
@@ -74,7 +74,7 @@ for(int j=0; j<N;j++){
 }
 var4 = 1/N * sum4;
 std::cout<<"Varianz:"<<var4<<std::endl;
-std::cout<<"Korrigierte Varianz:"<<N/(N-1)*var4<<std::endl;
+// std::cout<<"Korrigierte Varianz:"<<N/(N-1)*var4<<std::endl;
 
 fin3.close();
 fin4.close();
